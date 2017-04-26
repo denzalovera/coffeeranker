@@ -1,0 +1,10 @@
+# place files and directories to be ignored by git.
+# files to be ignored
+*.pyc
+*.log
+*.exe
+*.bat
+
+# directories to be ignored
+venv/*
+sql_server/*
