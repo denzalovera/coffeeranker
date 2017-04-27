@@ -9,5 +9,4 @@
 
 # directories to be ignored
 .idea/
-app/templates/
-venv/
+env/
