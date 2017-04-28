@@ -4,9 +4,10 @@
 *.log
 *.exe
 *.bat
+*iml
 /sql_server/sequel-pro.png
 /sql_server/mysql-vagrant-master.zip
 
 # directories to be ignored
-.idea/
+.idea/*
 env/
