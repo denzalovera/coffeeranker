@@ -6,11 +6,13 @@ from flask_sqlalchemy import SQLAlchemy
 """
 created by: denz 04/27/2017
 """
-from config.config import app_config
+from config import app_config
 
-db = SQLAchemy()
+db = SQLAlchemy()
+
 
 def create_app(config_name):
+
     app = Flask(__name__, instance_relative_config=True)
     # Load config files
     app.config.from_object(app_config[config_name])

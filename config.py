@@ -2,8 +2,8 @@
 Global configurations goes here.
 created by: denz 4/27/2017
 '''
+from coffee_utils import keygen
 
-from utility import key_gen
 
 class Config(object):
     """
@@ -31,6 +31,6 @@ app_config = {
     'production': ProductionConfig
 }
 
-SECRET_KEY = key_gen.generate_password(8)
+SECRET_KEY = keygen.generate_password(8)
 # TODO need to setup scotch as mysql server and figure out how to install mysql-python
 SQL_ALCHEMY_DATABASE_URI = ''
