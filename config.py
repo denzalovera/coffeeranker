@@ -3,7 +3,7 @@ Global configurations goes here.
 created by: denz 4/27/2017
 '''
 
-from util-scripts import key_gen
+from utility import key_gen
 
 class Config(object):
     """
