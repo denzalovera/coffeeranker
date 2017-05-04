@@ -18,7 +18,7 @@ class Employee(UserMixin, db.Model):
 
     # Ensure table will be named in plural and not in singular
     # as is the names of the model
-    __table_name__ = 'employees'
+    __tablename__ = 'employees'
 
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(60), index=True, unique=True)
@@ -65,7 +65,7 @@ class Department(db.Model):
     """
     Create a Department table
     """
-    __table_name__ = 'departments'
+    __tablename__ = 'departments'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(60), unique=True)
@@ -81,7 +81,7 @@ class Role(db.Model):
     Create Roles table
     """
 
-    __table_name__ = 'roles'
+    __tablename__ = 'roles'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(60), unique=True)
