@@ -2,7 +2,7 @@
 
 ## CoffeeRanker WebApp ##
 
-This README would normally document whatever steps are necessary to get your application up and running.
+A Simple CMS Built with Flask.
 
 ### What is this repository for? ###
 
@@ -11,12 +11,12 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* install dependencies listed in requirements.txt
+* db setup:
+    * create instance directory
+    * Database configuration
+        * create 'config.py' script
+        * format: 'mysql://username:password@localhost/db_name'
 
 ### Contribution guidelines ###
 
