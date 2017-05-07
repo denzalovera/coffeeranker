@@ -15,8 +15,10 @@ A Simple CMS Built with Flask.
 * db setup:
     * create instance directory
     * Database configuration
-        * create 'config.py' script
-        * format: 'mysql://username:password@localhost/db_name'
+        * create `config.py` script
+        * format: `mysql://username:password@localhost/db_name`
+    * for mysql-python using windows platform install:
+        * `pip install misc/MySQL_python-1.2.5-cp27-none-win32.whl`
 
 ### Contribution guidelines ###
 
