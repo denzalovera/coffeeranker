@@ -7,8 +7,6 @@
 *iml
 
 # directories to be ignored
-.idea/
 env/
 # inacase we have a virtualenv named this way.
 venv/
-instance/
