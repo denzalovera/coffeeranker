@@ -1,5 +1,5 @@
 from coffee_utils import keygen
-SECRET_KEY = keygen(8)
+SECRET_KEY = keygen.generate_password(8)
 
 DB_ENGINE = 'mysql'
 DB_USER = 'cr_admin'
