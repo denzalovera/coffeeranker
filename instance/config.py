@@ -7,4 +7,4 @@ DB_PASSWORD = 'admin'
 IP_ADDR = '192.168.33.10'
 DB = 'coffeeranker'
 
-SQLALCHEMY_DATABASE_URI = '{}://{}:{}@{}/dreamteam_db'.format(DB_ENGINE, DB_USER, DB_PASSWORD, IP_ADDR, DB)
+SQLALCHEMY_DATABASE_URI = '{}://{}:{}@{}/{}'.format(DB_ENGINE, DB_USER, DB_PASSWORD, IP_ADDR, DB)
