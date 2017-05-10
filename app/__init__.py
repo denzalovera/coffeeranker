@@ -5,6 +5,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_migrate import Migrate
+from flask_bootstrap import Bootstrap
 
 """
 created by: denz 04/27/2017
@@ -32,6 +33,7 @@ def create_app(config_name):
     login_manager.login_view = "auth.login"
 
     migrate = Migrate(app, db)
+    Bootstrap(app)
 
     from app import models
 
