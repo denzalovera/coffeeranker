@@ -21,4 +21,4 @@ def dashboard():
     render dashbaord template on '/dashboard' route
     """
 
-    return render_template('/home/dashboard.html', title='Dashboard')
+    return render_template('home/dashboard.html', title='Dashboard')
