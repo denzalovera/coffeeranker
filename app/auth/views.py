@@ -52,7 +52,7 @@ def login():
         if employee is not None and employee.verify_password(form.password.data):
 
             # login user
-            logout_user(employee)
+            login_user(employee)
 
             return redirect(url_for('home.dashboard'))
 
