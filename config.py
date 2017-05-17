@@ -14,7 +14,7 @@ class DevelopmentConfig(Config):
     """
     Development Environment
     """
-    DEBUG = True
+    FLASK_DEBUG = True
     SQLALCHEMY_ECHO = True
 
 
@@ -22,7 +22,7 @@ class ProductionConfig(Config):
     """
     Production Environment
     """
-    DEBUG = False
+    FLASK_DEBUG = False
 
 app_config = {
     'development': DevelopmentConfig,

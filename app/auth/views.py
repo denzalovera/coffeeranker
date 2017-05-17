@@ -53,8 +53,10 @@ def login():
 
             # login user
             login_user(employee)
-
-            return redirect(url_for('home.dashboard'))
+            if employee.is_admin:
+                return redirect(url_for('home.admin_dashboard'))
+            else:
+                return redirect(url_for('home.dashboard'))
 
         else:
             flash('Invalid email or password')
