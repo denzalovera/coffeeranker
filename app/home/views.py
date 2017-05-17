@@ -15,13 +15,19 @@ def homepage():
 
 
 # admin dashboard view
+@home.route('/admin/dashboard')
+@login_required
+def admin_dashboard():
+    if not current_user.is_admin:
+        abort(403)
+    return render_template('home/admin_dashboard.html', title='Dashboard')
+
+
+# user dashboard view
 @home.route('/dashboard')
 @login_required
 def dashboard():
     """
     render dashbaord template on '/dashboard' route
     """
-    if not current_user.is_admin:
-        abort(403)
-
     return render_template('home/dashboard.html', title='Dashboard')
