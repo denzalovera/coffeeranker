@@ -26,7 +26,7 @@ A Simple CMS Built with Flask.
         * `USE database_of_app`
         * `'GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'pass''`
         * `FLUSH PRIVILEGES`
-* execute script ./runner.sh to start server
+* execute script `./runnerProd.sh` to start server
 
 ### Contribution guidelines ###
 

@@ -10,3 +10,4 @@
 env/
 # inacase we have a virtualenv named this way.
 venv/
+.idea/
