@@ -11,8 +11,9 @@ from ..models import Department
 def check_admin():
     """
     verify if a login is admin, non-admin should not be able
-    to access the page
-
+    to access the page 
+    if a non-admin user attempts to access these views.
+    We will call this function in every admin view.
     created by: denz 05/25/2017
     """
 
@@ -26,19 +27,26 @@ def check_admin():
     def list_departments():
         """
         List all departments
+        This view redirects to the departments page. 
+        This means that once the admin user creates a new department, 
+        they will be redirected to the Departments page.
         """
         check_admin()
 
         departments = Department.query.all()
 
-        return render_template('admin/departments/departments.html',
+        return render_template('admin/departments/departments.html', 
         departments=departments, title='Departments')
+
 
     @admin.route('departments/add', methods=['GET', 'POST'])
     @login.required
     def add_department():
         """
-        Add a department to the database
+        view creates a new department object using the form data,
+        and adds it to the database.
+        If the department name already exists,
+        an error message is displayed.
         """
         check_admin()
 
@@ -100,7 +108,11 @@ def check_admin():
         @login_required
         def delete_department(id):
             """
-            Delete a department from the database
+            Delete a department from the database,
+            view is similar to the edit_department one, 
+            in that it takes a department ID as a parameter 
+            and throws an error if the specified department doesn't exist. 
+            If it does, it is deleted from the database.
             """
             check_admin()
 
@@ -113,8 +125,3 @@ def check_admin():
             return redirect(url_for('admin.list_departments'))
 
             return render_template(title='Delete Department')
-
-
-
-
-
