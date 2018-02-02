@@ -1,0 +1,4 @@
+features wish-list:
+1. challenges (weekly, monthly)
+2. share recommendations
+3. achievement system (TODO)
