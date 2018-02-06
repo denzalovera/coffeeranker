@@ -5,6 +5,7 @@
 *.exe
 *.bat
 *iml
+*.rar
 
 # directories to be ignored
 env/
